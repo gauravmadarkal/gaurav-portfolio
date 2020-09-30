@@ -1,0 +1,14 @@
+$primary-color: #dbe3e5;
+$accent-color: #0f3057;
+$secondary-color: #faf3dd;
+$secondary-accent-color: #aa4a30;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}

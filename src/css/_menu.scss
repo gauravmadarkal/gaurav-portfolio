@@ -5,7 +5,21 @@
   top: 1rem;
   cursor: pointer;
 }
-
+.icon {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .icon {
+    height: 30px;
+    width: 30px;
+  }
+}
 .nav {
   position: fixed;
   top: 50%;

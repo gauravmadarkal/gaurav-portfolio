@@ -1,0 +1,15 @@
+.container {
+  height: 100vh;
+  padding-top: 10vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  margin: 0 0 10px 10px;
+}

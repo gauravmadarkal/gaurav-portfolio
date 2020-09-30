@@ -4,38 +4,37 @@ import "./App.css";
 import "./css/font-awesome.min.css";
 import Navbar from "./js/components/navbar";
 import "./css/main.css";
-
-let showMenu = false;
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./js/components/home";
+import About from "./js/components/about";
+import Contact from "./js/components/contact";
+import Work from "./js/components/work";
+import Project from "./js/components/project";
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
-  toggleMenu() {
-    // var menuBtn = document.getElementById("menu");
-    var burgerIcon = document.getElementById("burger-icon");
-    var menuNav = document.getElementById("menu-nav");
-    var nav = document.getElementById("nav");
-    if (!showMenu) {
-      burgerIcon.className = "fa fa-times fa-2x";
-      showMenu = true;
-      menuNav.classList.add("open");
-      nav.classList.add("open");
-    } else {
-      burgerIcon.className = "fa fa-bars fa-2x";
-      showMenu = false;
-      menuNav.classList.remove("open");
-      nav.classList.remove("open");
-    }
-  }
+
   render() {
     return (
       <div className="App">
-        <header>
-          <div className="menu-btn" id="menu" onClick={() => this.toggleMenu()}>
-            <i id="burger-icon" class="fa fa-bars fa-2x"></i>
-          </div>
-          <Navbar></Navbar>
-        </header>
+        <Navbar></Navbar>
+        <footer>
+          <p className="footer">
+            <a class="footerIcons" href="#">
+              <i class="fa fa-instagram fa-2x"></i>
+            </a>
+            <a class="footerIcons" href="#">
+              <i class="fa fa-facebook fa-2x"></i>
+            </a>
+            <a class="footerIcons" href="#">
+              <i class="fa fa-twitter fa-2x"></i>
+            </a>
+            <a class="footerIcons" href="#">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+          </p>
+        </footer>
       </div>
     );
   }

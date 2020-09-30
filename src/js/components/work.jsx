@@ -1,4 +1,8 @@
 import React from "react";
 export default function Work() {
-  return <h1>Work Details</h1>;
+  return (
+    <div className="container" id="work">
+      <h1>Work</h1>
+    </div>
+  );
 }

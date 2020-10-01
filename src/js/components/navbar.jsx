@@ -6,18 +6,32 @@ import Contact from "./contact";
 import Work from "./work";
 import Project from "./project";
 let showMenu = false;
+let mediaScreen = false;
 class Navbar extends React.Component {
+  constructor() {
+    super();
+    var v = window.matchMedia("(max-width: 600px)");
+    mediaScreen = v.matches;
+  }
   toggleMenu() {
     var burgerIcon = document.getElementById("burger-icon");
     var menuNav = document.getElementById("menu-nav");
     var nav = document.getElementById("nav");
     if (!showMenu) {
-      burgerIcon.className = "fa fa-times fa-2x";
+      if (!mediaScreen) {
+        burgerIcon.className = "fa fa-times fa-3x";
+      } else {
+        burgerIcon.className = "fa fa-times fa-2x";
+      }
       showMenu = true;
       menuNav.classList.add("open");
       nav.classList.add("open");
     } else {
-      burgerIcon.className = "fa fa-bars fa-2x";
+      if (!mediaScreen) {
+        burgerIcon.className = "fa fa-align-left fa-3x";
+      } else {
+        burgerIcon.className = "fa fa-align-left fa-2x";
+      }
       showMenu = false;
       menuNav.classList.remove("open");
       nav.classList.remove("open");
@@ -33,7 +47,12 @@ class Navbar extends React.Component {
           </a>
           {/* </div> */}
           <div className="menu-btn" id="menu" onClick={() => this.toggleMenu()}>
-            <i id="burger-icon" class="fa fa-bars fa-2x"></i>
+            {!mediaScreen ? (
+              <i id="burger-icon" class="fa fa-align-left fa-3x"></i>
+            ) : (
+              <i id="burger-icon" class="fa fa-align-left fa-2x"></i>
+            )}
+            {/* <i class="fa fa-align-right fa-2x"></i> */}
           </div>
           <nav className="nav" id="nav">
             <ul className="menu-nav" id="menu-nav">
@@ -41,20 +60,6 @@ class Navbar extends React.Component {
                 <Link to="/">
                   <a href="#" className="menu-nav__link">
                     Home
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/about">
-                  <a href="#about" className="menu-nav__link">
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/contact">
-                  <a href="#contact" className="menu-nav__link">
-                    Contact
                   </a>
                 </Link>
               </li>
@@ -69,6 +74,20 @@ class Navbar extends React.Component {
                 <Link to="/work">
                   <a href="#work" className="menu-nav__link">
                     Work
+                  </a>
+                </Link>
+              </li>
+              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
+                <Link to="/about">
+                  <a href="#about" className="menu-nav__link">
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
+                <Link to="/contact">
+                  <a href="#contact" className="menu-nav__link">
+                    Contact
                   </a>
                 </Link>
               </li>

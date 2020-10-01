@@ -91,6 +91,13 @@
   color: #0f3057;
 }
 
+@media screen and (max-width: 600px) {
+  .nav .menu-nav__link {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+
 .nav .menu-nav__link:hover {
   color: #aa4a30;
 }
@@ -257,5 +264,10 @@ header {
   content: "";
   clear: both;
   display: table;
+}
+
+.copyrights {
+  right: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

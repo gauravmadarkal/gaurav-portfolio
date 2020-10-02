@@ -1,41 +1,47 @@
+const baseurl = "../../assets/img/project/";
 export const projects = [
   {
-    projectTitle: "First-Project",
-    projectDetails: "lorem ipsum doler",
-    projectLink: "https:\\microsoft.com",
-    projectImageName: "1.png",
+    projectTitle: "Hush - Android Application",
+    projectDetails:
+      "Introducing Hush, an event scheduler and peer activity viewer application",
+    projectLink:
+      "https://play.google.com/store/apps/details?id=org.hushapps.hush",
+    projectImageName: baseurl + "1.jpg",
     username: "gauravm",
     id: 1,
   },
   {
-    projectTitle: "Second-Project",
-    projectDetails: "lorem ipsum doler",
-    projectLink: "https:\\yahoo.com",
-    projectImageName: "2.png",
+    projectTitle: "Personal Portfolio",
+    projectDetails: "Personal portfolio website developed using react",
+    projectLink: "https://deepthi-murthy.web.app",
+    projectImageName: "./img/project/2.jpg",
     username: "gauravm",
     id: 2,
   },
   {
-    projectTitle: "Third-Project",
-    projectDetails: "lorem ipsum doler",
-    projectLink: "https:\\google.com",
-    projectImageName: "3.png",
+    projectTitle: "Network Connections",
+    projectDetails:
+      "DotNet standard application developed for the sole purpose of simplifying fetching network details",
+    projectLink: "https://www.nuget.org/packages/NetworkConnections/",
+    projectImageName: "../../assets/img/project/3.jpg",
     username: "gauravm",
     id: 3,
   },
   {
-    projectTitle: "Fourth-Project",
-    projectDetails: "lorem ipsum doler",
-    projectLink: "https:\\amazon.com",
-    projectImageName: "4.png",
+    projectTitle: "Smart Home Energy Management",
+    projectDetails:
+      "Smart Home Energy Management is a system that provides monitoring energy usage in user's house and inform the user about his/her usage patterns, spikes and surges.",
+    projectLink: "",
+    projectImageName: "../../assets/img/project/4.jpg",
     username: "gauravm",
     id: 4,
   },
   {
-    projectTitle: "Fifth-Project",
-    projectDetails: "lorem ipsum doler",
-    projectLink: "https:\\amazon.com",
-    projectImageName: "5.png",
+    projectTitle: "Traffic Lights Automation System",
+    projectDetails:
+      "This project describes the use of wireless communications for relieving ambulance from traffic congestion in urban areas.",
+    projectLink: "",
+    projectImageName: "../../assets/img/project/5.jpg",
     username: "gauravm",
     id: 5,
   },

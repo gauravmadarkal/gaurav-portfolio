@@ -28,9 +28,9 @@ class Navbar extends React.Component {
       nav.classList.add("open");
     } else {
       if (!mediaScreen) {
-        burgerIcon.className = "fa fa-align-left fa-3x";
+        burgerIcon.className = "fa fa-bars fa-3x";
       } else {
-        burgerIcon.className = "fa fa-align-left fa-2x";
+        burgerIcon.className = "fa fa-bars fa-2x";
       }
       showMenu = false;
       menuNav.classList.remove("open");
@@ -48,9 +48,9 @@ class Navbar extends React.Component {
           {/* </div> */}
           <div className="menu-btn" id="menu" onClick={() => this.toggleMenu()}>
             {!mediaScreen ? (
-              <i id="burger-icon" class="fa fa-align-left fa-3x"></i>
+              <i id="burger-icon" class="fa fa-bars fa-3x"></i>
             ) : (
-              <i id="burger-icon" class="fa fa-align-left fa-2x"></i>
+              <i id="burger-icon" class="fa fa-bars fa-2x"></i>
             )}
             {/* <i class="fa fa-align-right fa-2x"></i> */}
           </div>

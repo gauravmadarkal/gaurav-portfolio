@@ -7,7 +7,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   right: 1rem;
   top: 1rem;
   cursor: pointer;
@@ -17,10 +17,19 @@
   height: 70px;
   width: 70px;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   left: 1rem;
   top: 1rem;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+}
+
+.icon:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -39,6 +48,7 @@
   width: 100%;
   opacity: 0.98;
   visibility: hidden;
+  z-index: 2;
 }
 
 .nav.open {
@@ -61,7 +71,7 @@
           justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background: #dbe3e5;
+  background: #fcfbf0;
   list-style: none;
   padding-right: 1rem;
   -webkit-transform: translateY(-100%);
@@ -93,8 +103,8 @@
 
 @media screen and (max-width: 600px) {
   .nav .menu-nav__link {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }
 
@@ -103,7 +113,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
   padding-top: 10vh;
   overflow: hidden;
   -webkit-box-align: center;
@@ -116,8 +126,14 @@
 .footer {
   bottom: 0;
   left: 0;
-  position: absolute;
-  margin: 0 0 10px 10px;
+  position: relative;
+  margin: 20px 0 10px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    overflow: visible;
+  }
 }
 
 .hero-image {
@@ -219,7 +235,7 @@ p.self-description {
 .btn.learnmore-button {
   left: 0;
   margin: 20px 20px 20px 0px;
-  color: #dbe3e5;
+  color: #fcfbf0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -228,8 +244,117 @@ p.self-description {
   background-color: #aa4a30;
 }
 
+.heading {
+  font-weight: 700;
+  margin: 0 auto 0 auto;
+  padding: 25px;
+  color: #0f3057;
+}
+
+.slideshow {
+  width: 100%;
+  height: 70vh;
+  margin: 0 auto 0 auto;
+  border-radius: 10px;
+}
+
+.slideshow__img {
+  cursor: pointer;
+  width: 80%;
+  height: 70vh;
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, transparent), color-stop(40%, black));
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 40%);
+  mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(5%, transparent), color-stop(40%, black));
+  mask-image: linear-gradient(to top, transparent 5%, black 40%);
+  border-radius: 20px;
+}
+
+.projectDetails {
+  font-weight: 400;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: black;
+}
+
+.projectTitle {
+  font-weight: 700;
+  padding: 10px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.section__header {
+  margin-top: 80px;
+}
+
+.project__info {
+  margin: 20px;
+  text-align: start;
+}
+
+.__title {
+  font-size: 2em;
+  font-weight: 500;
+  border-bottom: #0f3057 solid 2px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid-container__projectinfo {
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  justify-items: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.project__image {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .slideshow__img {
+    height: 50vh;
+  }
+  .slideshow {
+    height: 50vh;
+  }
+  .projectDetails {
+    display: none;
+  }
+  .projectTitle {
+    font-size: 1rem;
+  }
+  .section__header {
+    margin-top: 0px;
+    padding: 10px;
+  }
+  .project__image {
+    display: none;
+  }
+  .grid-container__projectinfo {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #faf7e1;
+  background-color: #dbe3e5;
   color: #0f3057;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -238,7 +363,7 @@ body {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   padding: 1rem;
 }

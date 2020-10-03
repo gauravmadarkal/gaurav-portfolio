@@ -4,6 +4,7 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { projects } from "../../assets/datastore";
 import "../../css/bootstrap.min.css";
 import { images } from "../../assets/img/project/1.jpg";
+import { PieChart } from "react-minimal-pie-chart";
 let mediaScreen = false;
 const renderTooltip = (props) => (
   <Tooltip id="button-tooltip" className="tool_tip" {...props}>
@@ -41,9 +42,14 @@ function carouselItem(project) {
   );
 }
 
+function labelItem(label) {
+  console.log(label);
+  return <span class="tags">{label}</span>;
+}
+
 function projectContainer(project, len) {
   return (
-    <div className="container" id={"project" + project.id}>
+    <div className="container__project" id={"project" + project.id}>
       <div className="grid-container__projects">
         <div className="grid-item__projects">
           <div className="tag__wrapper">
@@ -53,11 +59,16 @@ function projectContainer(project, len) {
         <div className="grid-item__projects">
           <div className="project__info">
             <p className="__title">{project.projectTitle}</p>
+            <p className="__date">{project.projectDate}</p>
             {/* <div className="grid-container__projectinfo"> */}
-
             <p className="project__desc">{project.projectDetails}</p>
+            <div className="tagslist">
+              {project.keywords.map((key) => {
+                return labelItem(key);
+              })}
+            </div>
             <p className="left-wrapper">
-              <a href="/about" class="btn learnmore-button">
+              <a href={project.projectLink} class="btn learnmore-button">
                 More Info
               </a>
             </p>
@@ -104,9 +115,12 @@ export default function Project() {
         I do freelancing in Android and web application development, if you have
         any projects in mind, Hit me up!
       </h3>
-      <a href="/about" class="btn learnmore-button">
-        Contact Me
-      </a>
+      <p className="centered">
+        <a href="/about" class="btn learnmore-button">
+          Contact Me
+        </a>
+      </p>
+      <div className="sub-heading">PROJECT DETAILS</div>
       {projects.map((project) => {
         return projectContainer(project, projects.length);
       })}

@@ -123,9 +123,8 @@
   background-size: cover;
 }
 
-.android {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.9)), to(rgba(15, 48, 87, 0.32))), url("../assets//img//project/bg/android.png");
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.9), rgba(15, 48, 87, 0.32)), url("../assets//img//project/bg/android.png");
+.container__project {
+  overflow: visible;
 }
 
 .footer {
@@ -241,6 +240,7 @@ p.self-description {
 .btn.learnmore-button {
   left: 0;
   margin: 20px 20px 20px 0px;
+  border-radius: 10px;
   color: #fcfbf0;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
@@ -334,14 +334,35 @@ p.self-description {
 }
 
 .project__desc {
-  font-weight: 200;
-  font-size: 1.8em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: #6c757d;
+}
+
+.__date {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.tagslist {
+  margin: 10px;
+}
+
+.tagslist .tags {
+  background-color: #64b5f6;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color: white;
+  margin: 10px;
+  display: inline-block;
 }
 
 .__title {
   font-size: 3em;
-  font-weight: 500;
-  border-bottom: #0f3057 solid 2px;
+  font-weight: 700;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,10 +417,15 @@ p.self-description {
   height: 50px;
 }
 
+.project__piechart {
+  width: 100px;
+  height: 100px;
+}
+
 .tool_tip {
   padding: 10px;
   border-radius: 10px;
-  background-color: white;
+  background-color: #dbe3e5;
 }
 
 .grid-container__projectinfo {
@@ -459,6 +485,7 @@ p.self-description {
         grid-template-columns: 100%;
     -ms-grid-rows: 10% 90%;
         grid-template-rows: 10% 90%;
+    overflow: scroll;
   }
   .project__info {
     margin: 30px;
@@ -480,10 +507,10 @@ html {
 }
 
 body {
-  background-color: #dbe3e5;
+  background-color: white;
   color: #0f3057;
   height: 100vh;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1;
 }
 
@@ -520,5 +547,17 @@ header {
 .copyrights {
   right: 0;
   bottom: 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: 2em;
+  text-align: start;
+  border-bottom: #0f3057 solid 1px;
+  padding: 10px;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=main.css.map */

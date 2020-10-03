@@ -82,6 +82,7 @@ p.self-description {
   &.learnmore-button {
     left: 0;
     margin: 20px 20px 20px 0px;
+    border-radius: 10px;
     color: $primary-color;
     @include transition-ease;
     &:hover {

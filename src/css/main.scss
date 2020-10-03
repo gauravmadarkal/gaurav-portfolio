@@ -13,7 +13,8 @@ body {
   color: $accent-color;
   height: 100vh;
   //font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-family: "Josefin Sans", sans-serif;
+  // font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1;
 }
 
@@ -46,4 +47,14 @@ header {
 .copyrights {
   right: 0;
   bottom: 0;
+}
+.centered {
+  text-align: center;
+}
+.sub-heading {
+  font-size: 2em;
+  text-align: start;
+  border-bottom: $accent-color solid 1px;
+  padding: 10px;
+  margin-bottom: 20px;
 }

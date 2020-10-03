@@ -2,6 +2,7 @@ const baseurl = "../../assets/img/project/";
 export const projects = [
   {
     projectTitle: "Hush - Android Application",
+    projectDate: "Jan '20 - Apr '20",
     projectType: "A N D R O I D",
     projectOverview:
       "Introducing Hush, an event scheduler and peer activity viewer application",
@@ -12,10 +13,12 @@ export const projects = [
     projectImageName: baseurl + "1.jpg",
     username: "gauravm",
     id: 1,
+    keywords: ["Android", "Firebase", "Javascript", "UX", "Java"],
   },
   {
     projectTitle: "Personal Portfolio",
-    projectType: "W E B",
+    projectType: "W E B A P P",
+    projectDate: "Mar '20 - May '20",
     projectOverview: "Personal portfolio website developed using react",
     projectLink: "https://deepthi-murthy.web.app",
     projectDetails:
@@ -23,10 +26,12 @@ export const projects = [
     projectImageName: "./img/project/2.jpg",
     username: "gauravm",
     id: 2,
+    keywords: ["React.Js", "Redux", "Firebase", "Javascript", "UX"],
   },
   {
     projectTitle: "Network Connections",
     projectType: "O S S",
+    projectDate: "Aug '20 - Sept '20",
     projectOverview:
       "DotNet standard application developed for the sole purpose of simplifying fetching network details",
     projectDetails:
@@ -35,10 +40,12 @@ export const projects = [
     projectImageName: "../../assets/img/project/3.jpg",
     username: "gauravm",
     id: 3,
+    keywords: ["DotNet Standard", ".Net", "Nuget", "Cross Platform"],
   },
   {
     projectTitle: "Smart Home Energy Management",
-    projectType: "D A T A A N A L Y T I C S",
+    projectType: "A N A L Y T I C S",
+    projectDate: "Jan '29 - Apr '20",
     projectOverview:
       "Smart Home Energy Management is a system that provides monitoring energy usage in user's house and inform the user about his/her usage patterns, spikes and surges.",
     projectDetails:
@@ -47,10 +54,18 @@ export const projects = [
     projectImageName: "../../assets/img/project/4.jpg",
     username: "gauravm",
     id: 4,
+    keywords: [
+      "Android",
+      "Azure Blob Storage",
+      "R Programming",
+      "Python",
+      "Data Analytics",
+    ],
   },
   {
     projectTitle: "Traffic Lights Automation System",
     projectType: "E M B E D D E D",
+    projectDate: "Aug '18 - Nov '18",
     projectOverview:
       "This project describes the use of wireless communications for relieving ambulance from traffic congestion in urban areas.",
     projectDetails:
@@ -59,6 +74,13 @@ export const projects = [
     projectImageName: "../../assets/img/project/5.jpg",
     username: "gauravm",
     id: 5,
+    keywords: [
+      "Arduino",
+      "C Programming",
+      "Embedded Systems",
+      "Atmega8, Uno",
+      "Microcontrollers",
+    ],
   },
 ];
 export const work = [

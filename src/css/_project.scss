@@ -96,7 +96,7 @@
   }
 }
 .viewnext {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   cursor: pointer;
   -webkit-animation: bounce 2s infinite;
@@ -105,6 +105,12 @@
     width: 50px;
     height: 50px;
   }
+}
+.nobounce {
+  animation: none;
+  margin-top: 20px;
+  transform: translateY(-30px);
+  -webkit-transform: translateY(-30px);
 }
 .project__piechart {
   width: 100px;
@@ -141,7 +147,7 @@
     font-size: 1rem;
   }
   .section__header {
-    margin-top: 0px;
+    margin-top: 10px;
     padding: 10px;
   }
   .project__image {
@@ -157,6 +163,7 @@
   .project__desc {
     font-size: 1em;
     font-weight: 200;
+    line-height: 25px;
   }
   .grid-container__projects {
     grid-template-columns: 100%;

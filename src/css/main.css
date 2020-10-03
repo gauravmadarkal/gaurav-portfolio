@@ -127,6 +127,16 @@
   overflow: visible;
 }
 
+.container__work {
+  height: 50vh;
+}
+
+@media screen and (max-width: 600px) {
+  .container__work {
+    height: 100vh;
+  }
+}
+
 .footer {
   bottom: 0;
   left: 0;
@@ -405,7 +415,7 @@ p.self-description {
 }
 
 .viewnext {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   cursor: pointer;
   -webkit-animation: bounce 2s infinite;
@@ -415,6 +425,14 @@ p.self-description {
 .viewnext__img {
   width: 50px;
   height: 50px;
+}
+
+.nobounce {
+  -webkit-animation: none;
+          animation: none;
+  margin-top: 20px;
+  transform: translateY(-30px);
+  -webkit-transform: translateY(-30px);
 }
 
 .project__piechart {
@@ -461,7 +479,7 @@ p.self-description {
     font-size: 1rem;
   }
   .section__header {
-    margin-top: 0px;
+    margin-top: 10px;
     padding: 10px;
   }
   .project__image {
@@ -479,6 +497,7 @@ p.self-description {
   .project__desc {
     font-size: 1em;
     font-weight: 200;
+    line-height: 25px;
   }
   .grid-container__projects {
     -ms-grid-columns: 100%;
@@ -514,7 +533,7 @@ p.self-description {
   }
 }
 
-.work__container {
+.image__container {
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -541,6 +560,72 @@ p.self-description {
 .downarrow {
   position: absolute;
   z-index: 10;
+}
+
+.work__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.item1 {
+  background-color: #dbe3e5;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px;
+}
+
+.work_gridItem .workTitle {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.work_gridItem .workDesc {
+  display: inline-block;
+  width: 400px;
+  font-size: 1em;
+  text-align: start;
+  line-height: 25px;
+  color: #6c757d;
+}
+
+.work_gridItem .workDate {
+  font-size: 1em;
+}
+
+.work_gridItem .workOrg {
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .work__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .work_gridItem {
+    margin: 10px;
+  }
+  .work_gridItem .workDesc {
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 html {
@@ -600,5 +685,11 @@ header {
   border-bottom: #0f3057 solid 1px;
   padding: 10px;
   margin-bottom: 20px;
+}
+
+.short_heading {
+  font-size: 1.5em;
+  color: #7d7b6e;
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */

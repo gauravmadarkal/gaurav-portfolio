@@ -83,14 +83,13 @@ export const projects = [
     ],
   },
 ];
-export const work = [
+export const workHistory = [
   {
     workTitle: "Software Engineer",
     organisation: "Bella&Bona",
     details:
       "Working as a full stack developer alongside a team of agile developers, designing and implementing the entire e-commerce web app for Bella&Bona",
-    fromDate: "Oct '20",
-    toDate: "Present",
+    date: "Oct '20 - Present",
     userName: "gauravm",
     id: 1,
   },
@@ -99,8 +98,7 @@ export const work = [
     organisation: "Betsol",
     details:
       "Worked alongside a team of .Net Developers to develop and release a desktop application to migrate user's data across two PCs, the applications is estimated to serve close to a 40million consumers worldwide",
-    fromDate: "Jul '19",
-    toDate: "Sept '20",
+    date: "Jul '19 - Sept '20",
     userName: "gauravm",
     id: 2,
   },
@@ -109,8 +107,7 @@ export const work = [
     organisation: "Betsol",
     details:
       "Developed and deployed a Identity Microservice using Springboot on Microsoft AD",
-    fromDate: "Jan '19",
-    toDate: "Mar '19",
+    date: "Jan '19 - Mar '19",
     userName: "gauravm",
     id: 3,
   },
@@ -119,8 +116,7 @@ export const work = [
     organisation: "Adarshana Technology Solutions Pvt Ltd",
     details:
       "Worked as an Android Developer during the initial period of the internship, later half of the internship involved working on integrating in-house built smart home product with GoogleHome and Alexa",
-    fromDate: "Mar '18",
-    toDate: "Mar '19",
+    date: "Mar '18 - Mar '19",
     userName: "gauravm",
     id: 4,
   },
@@ -129,8 +125,7 @@ export const work = [
     organisation: "Tinystep",
     details:
       "Worked with the business development team to increase the revenue of the organistion using facebook marketing and google adwords",
-    fromDate: "Mar '17",
-    toDate: "Jul '17",
+    date: "Mar '17 - Jul '17",
     userName: "gauravm",
     id: 5,
   },

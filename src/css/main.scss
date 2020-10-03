@@ -59,3 +59,9 @@ header {
   padding: 10px;
   margin-bottom: 20px;
 }
+.short_heading {
+  font-size: 1.5em;
+  // text-align: start;
+  color: $overlay-color;
+  font-weight: 600;
+}

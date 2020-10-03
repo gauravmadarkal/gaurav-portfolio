@@ -33,6 +33,7 @@ h1.cover-heading.greetings {
 }
 .name {
   color: $overlay-color;
+  border-bottom: solid $accent-color 2px;
 }
 p.self-description {
   margin-top: 10px;

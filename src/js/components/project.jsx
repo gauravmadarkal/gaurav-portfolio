@@ -1,33 +1,99 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { projects } from "../../assets/datastore";
 import "../../css/bootstrap.min.css";
 import { images } from "../../assets/img/project/1.jpg";
+let mediaScreen = false;
+const renderTooltip = (props) => (
+  <Tooltip id="button-tooltip" className="tool_tip" {...props}>
+    View Next
+  </Tooltip>
+);
+
 function carouselItem(project) {
+  var v = window.matchMedia("(max-width: 600px)");
+  mediaScreen = v.matches;
   // const url = project.projectImageName;
   console.log(images);
   return (
     <Carousel.Item>
       <a href={"#project" + project.id}>
-        <img
-          className="slideshow__img"
-          src={require("../../assets/img/project/" + project.id + ".jpg")}
-          alt="Project Image"
-        />
+        {!mediaScreen ? (
+          <img
+            className="slideshow__img"
+            src={require("../../assets/img/project/" + project.id + ".jpg")}
+            alt="Project Image"
+          />
+        ) : (
+          <img
+            className="slideshow__img"
+            src={require("../../assets/img/project/alt/" + project.id + ".jpg")}
+            alt="Project Image"
+          />
+        )}
       </a>
       <Carousel.Caption>
         <div className="projectTitle">{project.projectTitle}</div>
-        <div className="projectDetails">{project.projectDetails}</div>
+        <div className="projectDetails">{project.projectOverview}</div>
       </Carousel.Caption>
     </Carousel.Item>
   );
 }
 
+function projectContainer(project, len) {
+  return (
+    <div className="container" id={"project" + project.id}>
+      <div className="grid-container__projects">
+        <div className="grid-item__projects">
+          <div className="tag__wrapper">
+            <div className="tag">{project.projectType}</div>
+          </div>
+        </div>
+        <div className="grid-item__projects">
+          <div className="project__info">
+            <p className="__title">{project.projectTitle}</p>
+            {/* <div className="grid-container__projectinfo"> */}
+
+            <p className="project__desc">{project.projectDetails}</p>
+            <p className="left-wrapper">
+              <a href="/about" class="btn learnmore-button">
+                More Info
+              </a>
+            </p>
+            {project.id !== len ? (
+              <p className="viewnext">
+                <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={renderTooltip}
+                >
+                  <a href={"#project" + (project.id + 1)}>
+                    <img
+                      className="viewnext__img"
+                      src={require("../../assets/img/icons/down.png")}
+                      alt=""
+                    />
+                  </a>
+                </OverlayTrigger>
+              </p>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          {/* </div> */}
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function Project() {
   return (
     <div>
       <div className="container" id="main">
-        <h1 className="heading">Projects</h1>
+        <h1 className="heading">
+          <span className="name">PRO</span>JECTS
+        </h1>
         <Carousel className="slideshow">
           {projects.map((project) => {
             return carouselItem(project);
@@ -41,45 +107,9 @@ export default function Project() {
       <a href="/about" class="btn learnmore-button">
         Contact Me
       </a>
-      <div className="container" id="project1">
-        <div className="project__info">
-          <p className="__title">Hush - Android Application</p>
-          <div className="grid-container__projectinfo">
-            <div className="grid-item">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est
-              laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <p className="left-wrapper">
-                <a href="/about" class="btn learnmore-button">
-                  More Info
-                </a>
-              </p>
-            </div>
-            <div className="grid-item">
-              <img
-                src={require("../../assets/img/icons/android.png")}
-                className="project__image"
-              ></img>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container" id="project2"></div>
-      <div className="container" id="project3"></div>
-
-      <div className="container" id="project4"></div>
-      <div className="container" id="project5"></div>
+      {projects.map((project) => {
+        return projectContainer(project, projects.length);
+      })}
     </div>
   );
 }

@@ -2,6 +2,7 @@
 @import "./menu";
 @import "./container";
 @import "./home";
+@import "./_animation";
 @import "./project";
 
 html {
@@ -11,7 +12,8 @@ body {
   background-color: $secondary-color;
   color: $accent-color;
   height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  //font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   line-height: 1;
 }
 

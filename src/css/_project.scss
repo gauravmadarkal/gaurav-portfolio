@@ -39,24 +39,70 @@
   margin: 20px;
   text-align: start;
 }
+.project__desc {
+  font-weight: 200;
+  font-size: 1.8em;
+}
 .__title {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 500;
   border-bottom: $accent-color solid 2px;
   margin-bottom: 10px;
   display: flex;
 }
+.grid-container__projects {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: repeat(1, 1fr);
+  justify-items: start;
+  align-items: flex-start;
+}
+.grid-item__projects {
+  height: 90vh;
+  .tag__wrapper {
+    background-color: $accent-color;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    .tag {
+      color: white;
+      font-size: 8em;
+      width: 1em;
+      font-size: 40px;
+      letter-spacing: 40px;
+      margin: 20px;
+      font-weight: 700;
+    }
+  }
+}
+.viewnext {
+  margin-top: 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  &__img {
+    width: 50px;
+    height: 50px;
+  }
+}
+.tool_tip {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
 .grid-container__projectinfo {
   height: 80vh;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: repeat(1, 1fr);
   justify-items: start;
   align-items: flex-start;
 }
 .project__image {
   width: 200px;
-  height: 200px;
+  height: 80vh;
 }
 @media screen and (max-width: 600px) {
   .slideshow__img {
@@ -81,5 +127,31 @@
   .grid-container__projectinfo {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+  }
+  .__title {
+    font-size: 1.5em;
+  }
+  .project__desc {
+    font-size: 1em;
+    font-weight: 200;
+  }
+  .grid-container__projects {
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 90%;
+  }
+  .project__info {
+    margin: 30px;
+  }
+  .grid-item__projects {
+    margin: auto;
+    .tag__wrapper {
+      .tag {
+        font-size: 2em;
+        width: 100%;
+        letter-spacing: 0px;
+        margin: 0;
+        padding: 5px;
+      }
+    }
   }
 }

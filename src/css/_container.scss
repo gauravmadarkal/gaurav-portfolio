@@ -6,7 +6,14 @@
   text-align: center;
   background-size: cover;
 }
-
+.android {
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.9),
+      rgba(15, 48, 87, 0.32)
+    ),
+    url("../assets//img//project/bg/android.png");
+}
 .footer {
   bottom: 0;
   left: 0;

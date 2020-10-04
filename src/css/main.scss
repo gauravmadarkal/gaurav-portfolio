@@ -6,6 +6,7 @@
 @import "./project";
 @import "./_work";
 @import "./_about";
+@import "./_perc_widget";
 
 html {
   scroll-behavior: smooth;
@@ -65,4 +66,11 @@ header {
   // text-align: start;
   color: $overlay-color;
   font-weight: 600;
+}
+.bold {
+  font-weight: 600;
+  font-size: 2em;
+}
+.section_header {
+  margin: 10px;
 }

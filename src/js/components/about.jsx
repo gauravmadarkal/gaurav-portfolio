@@ -1,7 +1,11 @@
 import React from "react";
 import { aboutme } from "../../assets/datastore";
 import "../../assets/img/about/1.jpg";
+import PieChart from "./piechart";
+let mediaScreen = false;
 export default function About() {
+  var v = window.matchMedia("(max-width: 600px)");
+  mediaScreen = v.matches;
   return (
     <div>
       <div className="container about">
@@ -58,6 +62,18 @@ export default function About() {
       {/* <div style={{ margin: "10px", background: "#dbe3e5" }}> */}
       <div className="aboutme__desc">
         <p>{aboutme.details}</p>
+        <p className="section_header bold centered">Tech Stack</p>
+        <div className="widget-grid">
+          {aboutme.techStack.map((tech) => {
+            // console.log(tech);
+            if (mediaScreen) {
+              if (tech.show)
+                return <PieChart title={tech.title} value={tech.value} />;
+            } else {
+              return <PieChart title={tech.title} value={tech.value} />;
+            }
+          })}
+        </div>
         <div className="inline-display">
           <p className="centered">
             <a href="/contact" class="btn learnmore-button">

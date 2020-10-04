@@ -8,6 +8,21 @@
   grid-template-rows: repeat(8, 5vw);
   margin-top: 10px;
 }
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  margin-top: 10px;
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+.widget {
+  &__title {
+    text-align: center;
+  }
+}
 .image-item1 {
   grid-column-start: 1;
   grid-column-end: 5;

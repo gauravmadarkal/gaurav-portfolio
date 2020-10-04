@@ -144,4 +144,12 @@ export const aboutme = {
   Twitterlink: "https://twitter.com/gaurav_jarvis98",
   Githublink: "https://github.com/gauravmadarkal",
   Mediumlink: "https://medium.com/@madarkal.gaurav",
+  techStack: [
+    { title: "Android/Java", value: "100%", show: true },
+    { title: ".Net/ASP.NET", value: "90%", show: true },
+    { title: "ReactJs", value: "80%", show: true },
+    { title: "SQL/NoSQL", value: "80%", show: false },
+    { title: "NodeJs", value: "70%", show: true },
+    { title: "UX", value: "60%", show: false },
+  ],
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { workHistory } from "../../assets/datastore";
+import { workHistory, aboutme } from "../../assets/datastore";
 
 function workContainer(work, len) {
   return (
@@ -57,12 +57,9 @@ export default function Work() {
           </div>
         </div>
       </div>
-      <h3 className="section__header">
-        I am always open to new opportunities, If you find my profile
-        interesting and want to hire me, feel free to reach out to me
-      </h3>
+      <h3 className="section__header">{aboutme.workDesc}</h3>
       <p className="centered">
-        <a href="/about" class="btn learnmore-button">
+        <a href="/contact" class="btn learnmore-button">
           Contact Me
         </a>
       </p>

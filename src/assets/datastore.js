@@ -90,7 +90,7 @@ export const workHistory = [
     details:
       "Working as a full stack developer alongside a team of agile developers, designing and implementing the entire e-commerce web app for Bella&Bona",
     date: "Oct '20 - Present",
-    userName: "gauravm",
+
     id: 1,
   },
   {
@@ -99,7 +99,7 @@ export const workHistory = [
     details:
       "Worked alongside a team of .Net Developers to develop and release a desktop application to migrate user's data across two PCs, the applications is estimated to serve close to a 40million consumers worldwide",
     date: "Jul '19 - Sept '20",
-    userName: "gauravm",
+
     id: 2,
   },
   {
@@ -108,7 +108,7 @@ export const workHistory = [
     details:
       "Developed and deployed a Identity Microservice using Springboot on Microsoft AD",
     date: "Jan '19 - Mar '19",
-    userName: "gauravm",
+
     id: 3,
   },
   {
@@ -117,7 +117,7 @@ export const workHistory = [
     details:
       "Worked as an Android Developer during the initial period of the internship, later half of the internship involved working on integrating in-house built smart home product with GoogleHome and Alexa",
     date: "Mar '18 - Mar '19",
-    userName: "gauravm",
+
     id: 4,
   },
   {
@@ -126,18 +126,22 @@ export const workHistory = [
     details:
       "Worked with the business development team to increase the revenue of the organistion using facebook marketing and google adwords",
     date: "Mar '17 - Jul '17",
-    userName: "gauravm",
+
     id: 5,
   },
 ];
 export const aboutme = {
-  ShortDescription: "lorem ipsum doler",
-  Details:
-    "lorem ipsum doler lorem ipsum doler lorem ipsum doler lorem ipsum doler lorem ipsum doler",
+  shortDesc:
+    "Deeply involved in the designing, developing and maintaining software, I also develop Android applications. If you have any project in mind, Hit me up!!",
+  workDesc:
+    "I am always open to new opportunities, If you find my profile interesting and want to hire me, feel free to reach out to me",
+  details:
+    "I am a software developer, interested in taking up complex problems and turning them into a simple efficient solution. When I am not coding or pushing commits, you can find me in the ground scoring goals with a football or I'll be sketching potraits and cartoons. Bit about my professional life, I am experienced in Product Development with a demonstrated history as a software developer in couple of start-up organisations and established firms. Skilled in C# and Java. Strong in programming and designing logic to a problem with a Bachelor of Engineering focused in Computer Science and Engineering.",
   Emailid: "madarkal.gaurav@gmail.com",
-  Instagramlink: "loremipsumdoler",
-  Facebooklink: "loremipsumdoler",
-  Dribblelink: "loremipsumdoler",
-  userName: "gauravm",
-  Id: 1,
+  Instagramlink: "https://www.instagram.com/gauravmadarkal/",
+  Facebooklink: "https://www.facebook.com/gaurav.madarkal",
+  Dribblelink: "https://dribbble.com/gaurav-m",
+  Twitterlink: "https://twitter.com/gaurav_jarvis98",
+  Githublink: "https://github.com/gauravmadarkal",
+  Mediumlink: "https://medium.com/@madarkal.gaurav",
 };

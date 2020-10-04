@@ -11,6 +11,7 @@
   &__work {
     height: 50vh;
   }
+
   @media screen and (max-width: 600px) {
     &__work {
       height: 100vh;
@@ -29,5 +30,8 @@
 @media screen and (max-width: 600px) {
   .container {
     overflow: visible;
+  }
+  .about {
+    height: 50vh;
   }
 }

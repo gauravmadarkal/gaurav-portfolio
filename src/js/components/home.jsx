@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/main.css";
+import { aboutme } from "../../assets/datastore";
 export default function Home() {
   return (
     <div className="container" id="home">
@@ -15,11 +16,7 @@ export default function Home() {
             Hi, I'm <span className="name">Gaurav</span>
           </h1>
 
-          <p class="self-description">
-            Deeply involved in the designing, developing and maintaining
-            software, I also develop Android applications. If you have any
-            project in mind, Hit me up!!
-          </p>
+          <p class="self-description">{aboutme.shortDesc}</p>
           <p className="left-wrapper">
             <a href="/about" class="btn learnmore-button">
               Learn more

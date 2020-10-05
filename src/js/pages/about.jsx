@@ -1,45 +1,30 @@
 import React from "react";
 import { aboutme } from "../../assets/datastore";
 import "../../assets/img/about/1.jpg";
-import PieChart from "./piechart";
+import PieChart from "../components/piechart";
 let mediaScreen = false;
 export default function About() {
   var v = window.matchMedia("(max-width: 600px)");
   mediaScreen = v.matches;
+  const images = [];
+  for (let i = 1; i <= 4; i++) {
+    images.push(
+      <div className={"image-item" + i}>
+        <img
+          className="about-image"
+          src={require("../../assets/img/about/" + i + ".jpg")}
+          alt={"image" + i}
+        />
+      </div>
+    );
+  }
   return (
     <div>
       <div className="container about">
         {/* <div className="container__about"> */}
         <p style={{ marginTop: "20px" }}>Home &gt; About</p>
         <div className="image-grid">
-          <div className="image-item1">
-            <img
-              className="about-image"
-              src={require("../../assets/img/about/1.jpg")}
-              alt=""
-            />
-          </div>
-          <div className="image-item2">
-            <img
-              className="about-image"
-              src={require("../../assets/img/about/2.jpg")}
-              alt=""
-            />
-          </div>
-          <div className="image-item3">
-            <img
-              className="about-image"
-              src={require("../../assets/img/about/3.jpg")}
-              alt=""
-            />
-          </div>
-          <div className="image-item4">
-            <img
-              className="about-image"
-              src={require("../../assets/img/about/4.jpg")}
-              alt=""
-            />
-          </div>
+          {images}
           <div className="image-item5">
             <p className="viewnext smallersize">
               <a style={{ textDecoration: "none" }} href="#details">

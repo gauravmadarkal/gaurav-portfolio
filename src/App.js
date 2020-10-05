@@ -1,15 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import "./css/font-awesome.min.css";
 import Navbar from "./js/components/navbar";
 import "./css/main.css";
 import { aboutme } from "./assets/datastore";
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="App">

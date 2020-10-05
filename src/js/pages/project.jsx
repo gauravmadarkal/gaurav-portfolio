@@ -4,7 +4,6 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { projects } from "../../assets/datastore";
 import "../../css/bootstrap.min.css";
 import { images } from "../../assets/img/project/1.jpg";
-import { PieChart } from "react-minimal-pie-chart";
 let mediaScreen = false;
 const renderTooltip = (props) => (
   <Tooltip id="button-tooltip" className="tool_tip" {...props}>

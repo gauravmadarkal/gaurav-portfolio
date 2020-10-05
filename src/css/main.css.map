@@ -7,11 +7,11 @@
         "_menu.scss",
         "_container.scss",
         "_home.scss",
-        "__animation.scss",
+        "_animation.scss",
         "_project.scss",
-        "__work.scss",
-        "__about.scss",
-        "__perc_widget.scss"
+        "_work.scss",
+        "_about.scss",
+        "_perc_widget.scss"
     ],
     "names": [],
     "file": "main.css"

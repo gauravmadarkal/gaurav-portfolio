@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Home from "./home";
-import About from "./about";
-import Contact from "./contact";
-import Work from "./work";
-import Project from "./project";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import Home from "../pages/home";
+import About from "../pages/about";
+import Contact from "../pages/contact";
+import Work from "../pages/work";
+import Project from "../pages/project";
+import { navLinks } from "../../assets/datastore";
 let showMenu = false;
 let mediaScreen = false;
 class Navbar extends React.Component {
@@ -37,62 +38,47 @@ class Navbar extends React.Component {
       nav.classList.remove("open");
     }
   }
+  navLinkItem(title, to, href) {
+    return (
+      <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
+        <Link to={to}>
+          <a href={href} className="menu-nav__link">
+            {title}
+          </a>
+        </Link>
+      </li>
+    );
+  }
+  Menu({ mediaScreen }) {
+    // console.log(mediaScreen);
+    return (
+      <div>
+        <a href="/home">
+          <img className="icon" src={require("../../assets/img/g.png")}></img>
+        </a>
+        <div className="menu-btn" id="menu" onClick={() => this.toggleMenu()}>
+          {!mediaScreen ? (
+            <i id="burger-icon" class="fa fa-bars fa-3x"></i>
+          ) : (
+            <i id="burger-icon" class="fa fa-bars fa-2x"></i>
+          )}
+        </div>
+        <nav className="nav" id="nav">
+          <ul className="menu-nav" id="menu-nav">
+            {navLinks.map((link) => {
+              return this.navLinkItem(link.title, link.to, link.href);
+            })}
+          </ul>
+        </nav>
+      </div>
+    );
+  }
   render() {
     return (
       <div>
         <Router>
-          {/* <div className="icon"> */}
-          <a href="/home">
-            <img className="icon" src={require("../../assets/img/g.png")}></img>
-          </a>
-          {/* </div> */}
-          <div className="menu-btn" id="menu" onClick={() => this.toggleMenu()}>
-            {!mediaScreen ? (
-              <i id="burger-icon" class="fa fa-bars fa-3x"></i>
-            ) : (
-              <i id="burger-icon" class="fa fa-bars fa-2x"></i>
-            )}
-            {/* <i class="fa fa-align-right fa-2x"></i> */}
-          </div>
-          <nav className="nav" id="nav">
-            <ul className="menu-nav" id="menu-nav">
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/">
-                  <a href="#" className="menu-nav__link">
-                    Home
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/projects">
-                  <a href="#projects" className="menu-nav__link">
-                    Projects
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/work">
-                  <a href="#work" className="menu-nav__link">
-                    Work
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/about">
-                  <a href="#about" className="menu-nav__link">
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li className="menu-nav__item" onClick={() => this.toggleMenu()}>
-                <Link to="/contact">
-                  <a href="#contact" className="menu-nav__link">
-                    Contact
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          {this.Menu(mediaScreen)}
+          {/* <Menu toggleMenuHandler={this.toggleMenu} mediaScreen={mediaScreen} /> */}
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
             <Route path="/projects" component={Project} />
@@ -106,6 +92,3 @@ class Navbar extends React.Component {
   }
 }
 export default Navbar;
-{
-  /* <i class="fa fa-times" aria-hidden="true"></i> */
-}

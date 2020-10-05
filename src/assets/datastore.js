@@ -153,3 +153,10 @@ export const aboutme = {
     { title: "UX", value: "60%", show: false },
   ],
 };
+export const navLinks = [
+  { to: "/", href: "#", title: "Home" },
+  { to: "/projects", href: "#projects", title: "Projects" },
+  { to: "/work", href: "#work", title: "Work" },
+  { to: "/about", href: "#about", title: "About" },
+  { to: "/contact", href: "#contact", title: "Contact" },
+];

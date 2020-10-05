@@ -2,11 +2,11 @@
 @import "./menu";
 @import "./container";
 @import "./home";
-@import "./_animation";
+@import "./animation";
 @import "./project";
-@import "./_work";
-@import "./_about";
-@import "./_perc_widget";
+@import "./work";
+@import "./about";
+@import "./perc_widget";
 
 html {
   scroll-behavior: smooth;

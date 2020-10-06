@@ -1,7 +1,8 @@
 import React from "react";
 import InputBox from "../components/inputBox";
 import CustomButton from "../components/button";
-
+import { contactForm, navLinks } from "../../assets/datastore";
+import FormValidator from "../helper/validator";
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -10,10 +11,54 @@ class Contact extends React.Component {
       email: null,
       message: null,
     };
+    this.SubmitForm = this.SubmitForm.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
   onChange(target) {
     console.log(target.id);
     console.log(target.value);
+    switch (target.id) {
+      case "name":
+        this.setState({
+          name: target.value,
+        });
+        break;
+      case "email":
+        this.setState({
+          email: target.value,
+        });
+        break;
+      case "message":
+        this.setState({
+          message: target.value,
+        });
+        break;
+    }
+  }
+  SubmitForm() {
+    console.log("submitted");
+    const elementIdArray = ["name", "email", "message"];
+    const isValid = FormValidator({
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    });
+    if (isValid.name & isValid.message & isValid.email) {
+      //send mail
+    } else {
+      for (let index in elementIdArray) {
+        const val = elementIdArray[index];
+        var nameElement = document.getElementById(val);
+        const errorMsgElement = document.getElementById(val + "_error");
+        if (isValid[val]) {
+          nameElement.classList.remove("error");
+          errorMsgElement.classList.remove("show");
+        } else {
+          nameElement.classList.add("error");
+          errorMsgElement.classList.add("show");
+        }
+      }
+    }
   }
   render() {
     return (
@@ -28,37 +73,21 @@ class Contact extends React.Component {
           </div>
           <div className="contact_gridItem form">
             <p className="contact-heading">CONTACT ME</p>
-            <InputBox
-              label="Name"
-              onChangeHandler={this.onChange}
-              multiLineInput={false}
-              id="name"
-              placeholder="Enter you name here"
-              errorMsg="C'mon, I need a valid name🤷‍♂️"
-              errorMsgId="name_error"
-              required={true}
-            />
-            <InputBox
-              label="Email Address"
-              onChangeHandler={this.onChange}
-              multiLineInput={false}
-              id="email"
-              placeholder="Enter you email here"
-              errorMsg="How could you go wrong here!!!🤦‍♂️"
-              errorMsgId="email_error"
-              required={true}
-            />
-            <InputBox
-              label="Message"
-              onChangeHandler={this.onChange}
-              multiLineInput={true}
-              id="message"
-              placeholder="Type your message here"
-              errorMsg="Just type something already😒"
-              errorMsgId="email_error"
-              required={true}
-            />
-            <CustomButton lhref="/contact" text="Send Message" />
+            {contactForm.map((contact) => {
+              return (
+                <InputBox
+                  label={contact.label}
+                  onChangeHandler={this.onChange}
+                  multiLineInput={contact.multiLineInput}
+                  id={contact.id}
+                  placeholder={contact.placeholder}
+                  errorMsg={contact.errorMsg}
+                  errorMsgId={contact.errorMsgId}
+                  required={contact.required}
+                />
+              );
+            })}
+            <CustomButton text="Send Message" onSubmit={this.SubmitForm} />
           </div>
         </div>
       </div>

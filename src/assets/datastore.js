@@ -160,3 +160,32 @@ export const navLinks = [
   { to: "/about", href: "#about", title: "About" },
   { to: "/contact", href: "#contact", title: "Contact" },
 ];
+export const contactForm = [
+  {
+    label: "Name",
+    multiLineInput: false,
+    id: "name",
+    placeholder: "Enter you name here",
+    errorMsg: "C'mon, I need a valid name🤷‍♂️",
+    errorMsgId: "name_error",
+    required: true,
+  },
+  {
+    label: "Email Address",
+    multiLineInput: false,
+    id: "email",
+    placeholder: "Enter you email here",
+    errorMsg: "How could you go wrong here!!!🤦‍♂️",
+    errorMsgId: "email_error",
+    required: true,
+  },
+  {
+    label: "Message",
+    multiLineInput: true,
+    id: "message",
+    placeholder: "Type your message here",
+    errorMsg: "Just type something already😒",
+    errorMsgId: "message_error",
+    required: true,
+  },
+];

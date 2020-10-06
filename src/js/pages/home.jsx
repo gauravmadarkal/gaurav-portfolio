@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/main.css";
 import { aboutme } from "../../assets/datastore";
+import CustomButton from "../components/button";
 export default function Home() {
   return (
     <div className="container" id="home">
@@ -18,9 +19,7 @@ export default function Home() {
 
           <p class="self-description">{aboutme.shortDesc}</p>
           <p className="left-wrapper">
-            <a href="/about" class="btn learnmore-button">
-              Learn more
-            </a>
+            <CustomButton lhref="/about" text="Learn More" />
           </p>
         </div>
       </div>

@@ -1,0 +1,41 @@
+.inputBox {
+  &__label {
+    font-size: 0.8em;
+    text-align: start;
+    margin: 5px 5px 5px 10px;
+    // flex: 1;
+  }
+  &__text {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    width: fill-available;
+    // flex: 1;
+    border: $accent-color solid 1px;
+  }
+  .error {
+    border: $error-color solid 1px !important;
+  }
+  .errorText {
+    visibility: hidden;
+    font-size: 0.7em;
+    color: $error-color;
+    &.show {
+      visibility: visible;
+    }
+  }
+  //   &__error {
+
+  //   }
+}
+.contact_gridItem {
+  &.form {
+    background-color: $alt-color;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+  }
+}

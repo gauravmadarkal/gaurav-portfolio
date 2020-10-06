@@ -4,6 +4,7 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { projects } from "../../assets/datastore";
 import "../../css/bootstrap.min.css";
 import { images } from "../../assets/img/project/1.jpg";
+import CustomButton from "../components/button";
 let mediaScreen = false;
 const renderTooltip = (props) => (
   <Tooltip id="button-tooltip" className="tool_tip" {...props}>
@@ -67,9 +68,7 @@ function projectContainer(project, len) {
               })}
             </div>
             <p className="left-wrapper">
-              <a href={project.projectLink} class="btn learnmore-button">
-                More Info
-              </a>
+              <CustomButton lhref={project.projectLink} text="More Info" />
             </p>
             {project.id !== len ? (
               <p className="viewnext">
@@ -115,9 +114,7 @@ export default function Project() {
         any projects in mind, Hit me up!
       </h3>
       <p className="centered">
-        <a href="/about" class="btn learnmore-button">
-          Contact Me
-        </a>
+        <CustomButton lhref="/contact" text="Contact me" />
       </p>
       <div className="sub-heading">PROJECT DETAILS</div>
       {projects.map((project) => {

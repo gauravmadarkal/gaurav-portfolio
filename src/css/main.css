@@ -135,6 +135,9 @@
   .container__work {
     height: 100vh;
   }
+  .container.contact {
+    overflow: scroll;
+  }
 }
 
 .footer {
@@ -1662,6 +1665,77 @@ p.self-description {
 
 .c100.orange.dark:hover > span {
   color: #e08833;
+}
+
+.contactGrid {
+  height: 100vh;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact-heading {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: start;
+  padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactGrid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+.inputBox__label {
+  font-size: 0.8em;
+  text-align: start;
+  margin: 5px 5px 5px 10px;
+}
+
+.inputBox__text {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  border: #0f3057 solid 1px;
+}
+
+.inputBox .error {
+  border: #b71c1c solid 1px !important;
+}
+
+.inputBox .errorText {
+  visibility: hidden;
+  font-size: 0.7em;
+  color: #b71c1c;
+}
+
+.inputBox .errorText.show {
+  visibility: visible;
+}
+
+.contact_gridItem.form {
+  background-color: #dbe3e5;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
 }
 
 html {

@@ -1,6 +1,6 @@
 import React from "react";
 import { workHistory, aboutme } from "../../assets/datastore";
-
+import CustomButton from "../components/button";
 function workContainer(work, len) {
   return (
     <div className="container__work" id={"work" + work.id}>
@@ -59,9 +59,7 @@ export default function Work() {
       </div>
       <h3 className="section__header">{aboutme.workDesc}</h3>
       <p className="centered">
-        <a href="/contact" class="btn learnmore-button">
-          Contact Me
-        </a>
+        <CustomButton lhref="/contact" text="Contact me" />
       </p>
       <div className="sub-heading" id="mywork">
         WORK HISTORY

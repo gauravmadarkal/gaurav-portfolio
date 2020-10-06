@@ -49,7 +49,7 @@ class Navbar extends React.Component {
       </li>
     );
   }
-  Menu({ mediaScreen }) {
+  Menu() {
     // console.log(mediaScreen);
     return (
       <div>

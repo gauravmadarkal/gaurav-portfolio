@@ -1,0 +1,21 @@
+.contactGrid {
+  height: 100vh;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: start;
+  align-items: flex-start;
+}
+.contact-heading {
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: start;
+  padding: 10px;
+}
+@media screen and (max-width: 600px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

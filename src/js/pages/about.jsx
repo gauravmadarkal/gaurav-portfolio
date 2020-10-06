@@ -2,6 +2,7 @@ import React from "react";
 import { aboutme } from "../../assets/datastore";
 import "../../assets/img/about/1.jpg";
 import PieChart from "../components/piechart";
+import CustomButton from "../components/button";
 let mediaScreen = false;
 export default function About() {
   var v = window.matchMedia("(max-width: 600px)");
@@ -61,9 +62,7 @@ export default function About() {
         </div>
         <div className="inline-display">
           <p className="centered">
-            <a href="/contact" class="btn learnmore-button">
-              Contact me
-            </a>
+            <CustomButton lhref="/contact" text="Contact me" />
           </p>
         </div>
       </div>

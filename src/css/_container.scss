@@ -16,6 +16,9 @@
     &__work {
       height: 100vh;
     }
+    &.contact {
+      overflow: scroll;
+    }
   }
   // #work {
   //   background: url("../assets/img/work/work-bg-img-2.jpg");

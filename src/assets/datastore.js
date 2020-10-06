@@ -22,7 +22,7 @@ export const projects = [
     projectOverview: "Personal portfolio website developed using react",
     projectLink: "https://deepthi-murthy.web.app",
     projectDetails:
-      "Did your phone ever ring when you didn't want it to? Well worry no more, We have got just the thing for you. Hush comes with a very user friendly and easy to use UI, we follow the policy of Less clicks more work. With Hush you will be able to Setup multiple profiles of Quite-Hours(one for driving, one for sleeping, one for meetings etc). Set status based on your availability, which can be viewed by your contacts. There are many more features to explore, click below to learn more",
+      "This is a Personal portfolio project developed entirely using react with Javascript using components based approach. It uses redux for state management and is deployed on firebase",
     projectImageName: "./img/project/2.jpg",
     username: "gauravm",
     id: 2,
@@ -35,7 +35,7 @@ export const projects = [
     projectOverview:
       "DotNet standard application developed for the sole purpose of simplifying fetching network details",
     projectDetails:
-      "Did your phone ever ring when you didn't want it to? Well worry no more, We have got just the thing for you. Hush comes with a very user friendly and easy to use UI, we follow the policy of Less clicks more work. With Hush you will be able to Setup multiple profiles of Quite-Hours(one for driving, one for sleeping, one for meetings etc). Set status based on your availability, which can be viewed by your contacts. There are many more features to explore, click below to learn more",
+      "Network Connections is a DotNet standard solution that is developed for the sole purpose of reducing the effort involved to fetch the network connection details on any platform, the version 1 release supports windows platform, this solution is generic enough and can be extended to linux or OSX. It is an open source solution, so please feel free to contribute",
     projectLink: "https://www.nuget.org/packages/NetworkConnections/",
     projectImageName: "../../assets/img/project/3.jpg",
     username: "gauravm",
@@ -55,7 +55,7 @@ export const projects = [
     projectOverview:
       "Smart Home Energy Management is a system that provides monitoring energy usage in user's house and inform the user about his/her usage patterns, spikes and surges.",
     projectDetails:
-      "Did your phone ever ring when you didn't want it to? Well worry no more, We have got just the thing for you. Hush comes with a very user friendly and easy to use UI, we follow the policy of Less clicks more work. With Hush you will be able to Setup multiple profiles of Quite-Hours(one for driving, one for sleeping, one for meetings etc). Set status based on your availability, which can be viewed by your contacts. There are many more features to explore, click below to learn more",
+      "Smart Home Energy Management System is an efficient solution to monitor energy usage in one's house and inform the user about his/her activity by analyzing the usage patterns. This solution uses complex Data Analytics and Machine Learning models to find similarities and also predict the energy usage. It also provides demographics and usage charts which highlight energy usage as well as any presence of surges/spikes which might lead to damage of electronic devices",
     projectLink: "",
     projectImageName: "../../assets/img/project/4.jpg",
     username: "gauravm",
@@ -75,7 +75,7 @@ export const projects = [
     projectOverview:
       "This project describes the use of wireless communications for relieving ambulance from traffic congestion in urban areas.",
     projectDetails:
-      "Did your phone ever ring when you didn't want it to? Well worry no more, We have got just the thing for you. Hush comes with a very user friendly and easy to use UI, we follow the policy of Less clicks more work. With Hush you will be able to Setup multiple profiles of Quite-Hours(one for driving, one for sleeping, one for meetings etc). Set status based on your availability, which can be viewed by your contacts. There are many more features to explore, click below to learn more",
+      "Traffic lights management system is a solution to a real time pressing problem faced by emergency vehicles such as Ambulance/Fire Engines/Police Vehicles. This solution removes the waiting period for such vehicles in traffic areas. It provides a simple yet efficient solution to override the regular traffic lights system just for these vehicles in emergency situations. This project is simulates a traffic situation and provides a override remote to access the traffic lights system remotely",
     projectLink: "",
     projectImageName: "../../assets/img/project/5.jpg",
     username: "gauravm",

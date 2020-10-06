@@ -136,6 +136,13 @@ export const workHistory = [
     id: 5,
   },
 ];
+export const socialMediaProviders = [
+  "instagram",
+  "github",
+  "facebook",
+  "twitter",
+  "medium",
+];
 export const aboutme = {
   shortDesc:
     "Deeply involved in the designing, developing and maintaining software, I also develop Android applications. If you have any project in mind, Hit me up!!",
@@ -144,12 +151,14 @@ export const aboutme = {
   details:
     "I am a software developer, interested in taking up complex problems and turning them into a simple efficient solution. When I am not coding or pushing commits, you can find me in the ground scoring goals 😜 with a football or I'll be sketching landscapes or cartoons. Bit about my professional life, I am experienced in Product Development with a demonstrated history as a software developer in couple of start-up organisations and established firms. Skilled in C# and Java. Strong in programming and designing logic to a problem with a Bachelor of Engineering focused in Computer Science and Engineering.",
   Emailid: "madarkal.gaurav@gmail.com",
-  Instagramlink: "https://www.instagram.com/gauravmadarkal/",
-  Facebooklink: "https://www.facebook.com/gaurav.madarkal",
-  Dribblelink: "https://dribbble.com/gaurav-m",
-  Twitterlink: "https://twitter.com/gaurav_jarvis98",
-  Githublink: "https://github.com/gauravmadarkal",
-  Mediumlink: "https://medium.com/@madarkal.gaurav",
+  socialMediaLinks: {
+    instagram: "https://www.instagram.com/gauravmadarkal/",
+    facebook: "https://www.facebook.com/gaurav.madarkal",
+    dribble: "https://dribbble.com/gaurav-m",
+    twitter: "https://twitter.com/gaurav_jarvis98",
+    github: "https://github.com/gauravmadarkal",
+    medium: "https://medium.com/@madarkal.gaurav",
+  },
   techStack: [
     { title: "Android/Java", value: "100%", show: true },
     { title: ".Net/ASP.NET", value: "90%", show: true },

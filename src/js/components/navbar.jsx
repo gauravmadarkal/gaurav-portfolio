@@ -6,6 +6,7 @@ import Contact from "../pages/contact";
 import Work from "../pages/work";
 import Project from "../pages/project";
 import { navLinks } from "../../assets/datastore";
+import NotFound from "../pages/notfound";
 let showMenu = false;
 let mediaScreen = false;
 class Navbar extends React.Component {
@@ -85,6 +86,7 @@ class Navbar extends React.Component {
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/work" component={Work} />
+            <Route path="*" component={NotFound} />
           </Switch>
         </Router>
       </div>

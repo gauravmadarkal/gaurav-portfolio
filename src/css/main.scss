@@ -9,6 +9,7 @@
 @import "./perc_widget";
 @import "./contact";
 @import "./input_box";
+@import "./notfound";
 
 html {
   scroll-behavior: smooth;
@@ -84,8 +85,32 @@ header {
 .textdesc {
   text-align: left;
 }
+.highlight {
+  color: $overlay-color;
+}
+.big {
+  font-size: 2em;
+}
+.icon_img {
+  width: 50px;
+  height: 50px;
+  @include transition-ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.boring-text {
+  color: $lrg-text-color;
+}
 @media screen and (max-width: 600px) {
   .sub-heading {
     font-size: 1.5em;
+  }
+  .big {
+    font-size: 1.5em;
+  }
+  .icon_img {
+    width: 30px;
+    height: 30px;
   }
 }

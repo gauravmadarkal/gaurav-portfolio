@@ -40,7 +40,13 @@ export const projects = [
     projectImageName: "../../assets/img/project/3.jpg",
     username: "gauravm",
     id: 3,
-    keywords: ["DotNet Standard", ".Net", "Nuget", "Cross Platform"],
+    keywords: [
+      "DotNet Standard",
+      ".Net",
+      "Nuget",
+      "Cross Platform",
+      "Open Source",
+    ],
   },
   {
     projectTitle: "Smart Home Energy Management",
@@ -79,7 +85,7 @@ export const projects = [
       "C Programming",
       "Embedded Systems",
       "Atmega8, Uno",
-      "Microcontrollers",
+      "Micro Controllers",
     ],
   },
 ];

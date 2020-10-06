@@ -1792,8 +1792,9 @@ header {
 
 .sub-heading {
   font-size: 2em;
-  text-align: start;
-  padding: 10px;
+  text-align: center;
+  background-color: #dbe3e5;
+  padding: 15px;
   margin-bottom: 20px;
 }
 

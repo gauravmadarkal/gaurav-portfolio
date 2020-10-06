@@ -58,9 +58,10 @@ header {
 }
 .sub-heading {
   font-size: 2em;
-  text-align: start;
+  text-align: center;
+  background-color: $alt-color;
   // border-bottom: $accent-color solid 1px;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
 }
 .short_heading {

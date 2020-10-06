@@ -43,7 +43,7 @@ export default function About() {
         </div>
       </div>
       <div className="sub-heading" id="details">
-        About Me.
+        About Me
       </div>
       {/* <div style={{ margin: "10px", background: "#dbe3e5" }}> */}
       <div className="aboutme__desc">

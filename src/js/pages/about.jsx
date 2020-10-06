@@ -47,7 +47,7 @@ export default function About() {
       </div>
       {/* <div style={{ margin: "10px", background: "#dbe3e5" }}> */}
       <div className="aboutme__desc">
-        <p>{aboutme.details}</p>
+        <p className="textdesc">{aboutme.details}</p>
         <p className="section_header bold centered">Tech Stack</p>
         <div className="widget-grid">
           {aboutme.techStack.map((tech) => {

@@ -133,7 +133,7 @@
 
 @media screen and (max-width: 600px) {
   .container__work {
-    height: 100vh;
+    height: auto;
   }
   .container.contact {
     overflow: scroll;
@@ -152,7 +152,7 @@
     overflow: visible;
   }
   .about {
-    height: 50vh;
+    height: auto;
   }
 }
 
@@ -1793,7 +1793,6 @@ header {
 .sub-heading {
   font-size: 2em;
   text-align: start;
-  border-bottom: #0f3057 solid 1px;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -1812,5 +1811,15 @@ header {
 .section_header {
   margin: 10px;
   color: #7d7b6e;
+}
+
+.textdesc {
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    font-size: 1.5em;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -59,7 +59,7 @@ header {
 .sub-heading {
   font-size: 2em;
   text-align: start;
-  border-bottom: $accent-color solid 1px;
+  // border-bottom: $accent-color solid 1px;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -76,4 +76,12 @@ header {
 .section_header {
   margin: 10px;
   color: $overlay-color;
+}
+.textdesc {
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    font-size: 1.5em;
+  }
 }

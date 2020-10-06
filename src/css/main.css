@@ -1798,6 +1798,10 @@ header {
   margin-bottom: 20px;
 }
 
+.sub-heading.aboutheading {
+  margin-top: 20px;
+}
+
 .short_heading {
   font-size: 1.5em;
   color: #7d7b6e;

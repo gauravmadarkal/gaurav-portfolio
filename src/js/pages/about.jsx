@@ -42,7 +42,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="sub-heading" id="details">
+      <div className="sub-heading aboutheading" id="details">
         About Me
       </div>
       {/* <div style={{ margin: "10px", background: "#dbe3e5" }}> */}

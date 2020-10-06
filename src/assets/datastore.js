@@ -136,7 +136,7 @@ export const aboutme = {
   workDesc:
     "I am always open to new opportunities, If you find my profile interesting and want to hire me, feel free to reach out to me",
   details:
-    "I am a software developer, interested in taking up complex problems and turning them into a simple efficient solution. When I am not coding or pushing commits, you can find me in the ground scoring goals with a football or I'll be sketching potraits and cartoons. Bit about my professional life, I am experienced in Product Development with a demonstrated history as a software developer in couple of start-up organisations and established firms. Skilled in C# and Java. Strong in programming and designing logic to a problem with a Bachelor of Engineering focused in Computer Science and Engineering.",
+    "I am a software developer, interested in taking up complex problems and turning them into a simple efficient solution. When I am not coding or pushing commits, you can find me in the ground scoring goals 😜 with a football or I'll be sketching landscapes or cartoons. Bit about my professional life, I am experienced in Product Development with a demonstrated history as a software developer in couple of start-up organisations and established firms. Skilled in C# and Java. Strong in programming and designing logic to a problem with a Bachelor of Engineering focused in Computer Science and Engineering.",
   Emailid: "madarkal.gaurav@gmail.com",
   Instagramlink: "https://www.instagram.com/gauravmadarkal/",
   Facebooklink: "https://www.facebook.com/gaurav.madarkal",
@@ -147,9 +147,9 @@ export const aboutme = {
   techStack: [
     { title: "Android/Java", value: "100%", show: true },
     { title: ".Net/ASP.NET", value: "90%", show: true },
-    { title: "ReactJs", value: "80%", show: true },
+    { title: "React", value: "80%", show: true },
     { title: "SQL/NoSQL", value: "80%", show: false },
-    { title: "NodeJs", value: "70%", show: true },
+    { title: "Node", value: "70%", show: true },
     { title: "UX", value: "60%", show: false },
   ],
 };

@@ -749,6 +749,7 @@ p.self-description {
   font-weight: 300;
   text-align: justify;
   background-color: #dbe3e5;
+  color: #6c757d;
   padding: 20px;
   line-height: 25px;
 }
@@ -1810,5 +1811,6 @@ header {
 
 .section_header {
   margin: 10px;
+  color: #7d7b6e;
 }
 /*# sourceMappingURL=main.css.map */

@@ -24,7 +24,7 @@ function navLinkItem(title, to, href, toggleMenuHandler) {
 }
 
 export default function Menu({ toggleMenuHandler, mediaScreen }) {
-  console.log(mediaScreen);
+  // console.log(mediaScreen);
   return (
     <div>
       <a href="/home">

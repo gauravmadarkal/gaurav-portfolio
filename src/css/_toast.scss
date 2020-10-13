@@ -1,0 +1,35 @@
+.toastContainer{
+    top: 10%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: fixed;
+    width: auto;
+    height: auto;
+    color: $secondary-color;
+    padding: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+    &.show{
+        animation: FadeAnimation 2s ease-in .2s forwards;
+    }
+    &.success{
+        background-color: $success;
+    }
+    &.warning{
+        background-color: $warning;
+    }
+    &.error{
+        background-color: $error;
+    }
+}
+@keyframes FadeAnimation {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+}

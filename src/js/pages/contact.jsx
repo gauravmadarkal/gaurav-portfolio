@@ -3,6 +3,11 @@ import InputBox from "../components/inputBox";
 import CustomButton from "../components/button";
 import { contactForm, navLinks } from "../../assets/datastore";
 import FormValidator from "../helper/validator";
+import emailjs from "emailjs-com";
+import Toast from "../components/toast";
+
+const { REACT_APP_EMAIL_TEMPLATE, REACT_APP_EMAIL_CLIENT_SECRET, REACT_APP_EMAIL_SERVICE_ID } = process.env;
+const toastData = {title: "Email sent successfully!"}
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -10,13 +15,13 @@ class Contact extends React.Component {
       name: null,
       email: null,
       message: null,
+      showToast: false
     };
     this.SubmitForm = this.SubmitForm.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.sendMail = this.sendMail.bind(this);
   }
   onChange(target) {
-    console.log(target.id);
-    console.log(target.value);
     switch (target.id) {
       case "name":
         this.setState({
@@ -35,8 +40,25 @@ class Contact extends React.Component {
         break;
     }
   }
+  sendMail(){
+    const template_params = {
+      from_name : this.state.name,
+      reply_to : this.state.email,
+      subject : "Mail from - " + this.state.name,
+      message_html : this.state.message
+    }   
+    emailjs.send(
+      REACT_APP_EMAIL_SERVICE_ID, REACT_APP_EMAIL_TEMPLATE,
+      template_params, REACT_APP_EMAIL_CLIENT_SECRET
+      ).then(res => {
+        this.setState({
+          showToast: true
+        })
+        // alert('Email successfully sent!')
+      })
+      .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+  }
   SubmitForm() {
-    console.log("submitted");
     const elementIdArray = ["name", "email", "message"];
     const isValid = FormValidator({
       name: this.state.name,
@@ -44,7 +66,7 @@ class Contact extends React.Component {
       message: this.state.message,
     });
     if (isValid.name & isValid.message & isValid.email) {
-      //send mail
+      this.sendMail();
     } else {
       for (let index in elementIdArray) {
         const val = elementIdArray[index];
@@ -63,6 +85,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="container contact" id="contact">
+        {this.state.showToast && <Toast toastData={toastData} className="success"/>}
         <p style={{ marginTop: "20px" }}>Home &gt; Contact</p>
         <div className="contactGrid">
           <div className="contact_gridItem">

@@ -252,6 +252,7 @@ p.self-description {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .btn.learnmore-button {
@@ -1784,6 +1785,59 @@ p.self-description {
   }
   .notfound__message {
     font-size: 1.5em;
+  }
+}
+
+.toastContainer {
+  top: 10%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  position: fixed;
+  width: auto;
+  height: auto;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.toastContainer.show {
+  -webkit-animation: FadeAnimation 2s ease-in .2s forwards;
+          animation: FadeAnimation 2s ease-in .2s forwards;
+}
+
+.toastContainer.success {
+  background-color: #689f38;
+}
+
+.toastContainer.warning {
+  background-color: #f57c00;
+}
+
+.toastContainer.error {
+  background-color: #d32f2f;
+}
+
+@-webkit-keyframes FadeAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes FadeAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

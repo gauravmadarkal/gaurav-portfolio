@@ -16,7 +16,7 @@ function carouselItem(project) {
   var v = window.matchMedia("(max-width: 600px)");
   mediaScreen = v.matches;
   // const url = project.projectImageName;
-  console.log(images);
+  // console.log(images);
   return (
     <Carousel.Item>
       <a href={"#project" + project.id}>
@@ -43,7 +43,7 @@ function carouselItem(project) {
 }
 
 function labelItem(label) {
-  console.log(label);
+  // console.log(label);
   return <span class="tags">{label}</span>;
 }
 

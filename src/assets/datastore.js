@@ -56,7 +56,7 @@ export const projects = [
       "Smart Home Energy Management is a system that provides monitoring energy usage in user's house and inform the user about his/her usage patterns, spikes and surges.",
     projectDetails:
       "Smart Home Energy Management System is an efficient solution to monitor energy usage in one's house and inform the user about his/her activity by analyzing the usage patterns. This solution uses complex Data Analytics and Machine Learning models to find similarities and also predict the energy usage. It also provides demographics and usage charts which highlight energy usage as well as any presence of surges/spikes which might lead to damage of electronic devices",
-    projectLink: "",
+    projectLink: '../../assets/docs/publication_4.pdf',
     projectImageName: "../../assets/img/project/4.jpg",
     username: "gauravm",
     id: 4,
@@ -76,7 +76,7 @@ export const projects = [
       "This project describes the use of wireless communications for relieving ambulance from traffic congestion in urban areas.",
     projectDetails:
       "Traffic lights management system is a solution to a real time pressing problem faced by emergency vehicles such as Ambulance/Fire Engines/Police Vehicles. This solution removes the waiting period for such vehicles in traffic areas. It provides a simple yet efficient solution to override the regular traffic lights system just for these vehicles in emergency situations. This project is simulates a traffic situation and provides a override remote to access the traffic lights system remotely",
-    projectLink: "",
+    projectLink: "../../assets/docs/publication_5.pdf",
     projectImageName: "../../assets/img/project/5.jpg",
     username: "gauravm",
     id: 5,
